@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <a href="#" class="logo">@itshale</a>
+
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#projects" >Showcase</a>
+            <a href="#academic" >Projects</a>
+            <a href="#connections">Networks</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Ha Le</span></h1>
+            <h3 class="typing-text">I'm <span></span></h3>
+            <p class="content-text">
+                Welcome to my portfolio! I dedicated this website to
+                documenting my journey: learning, missteps, and cherished connections.
+            </p>
+            <p class="content-text">
+                Technology and Entrepreneurship have long been my aspiration.
+                Hope my journey may elicit thoughtful feedback from those who
+                visit this site, or perhaps spark your interest.
+            </p>
+
+               <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/hale04/')"></i></a>
+                <a href="#"><i class="fa-brands fa-github" onclick="window.open('https://github.com/hagan04')"></i></a>
+            </div>
+            <a href="#" class="btn" onclick="window.open('./assets/hale-resume.pdf')">Download CV</a>
+        </div>
+    </section>
+<!-- ===================== Main Content ===================== -->
+<section class="projects" id="projects">
+    <div class="section-header">
+        <span class="section-pill"></span>
+        <h2>Achievements & Competitions Showcase</h2>
+    </div>
+
+    <!-- YEAR 1 -->
+    <div class="showcase-item year-1">
+        <span class="showcase-year">Year 1</span>
+
+        <div class="showcase-card">
+            <div class="showcase-image">
+                <img src="./assets/achieve-1.jpg" alt="Year 1 Project">
+            </div>
+            <div class="showcase-content">
+                <h3>First Co-authored Research Publication</h3>
+                <p class="content-text">
+                    I began my academic journey with a touch of luck. 
+                </p>
+                <p class="content-text">
+                    Receiving a call to join a research initiative at TDU, 
+                    which later having an opportunity to be progressing toward publication.
+                </p>
+                <hr class="showcase-divider">
+                <p class="content-text">
+                    <em>
+                        The study focuses on how authenticity cues on 
+                        Korean cosmetic packaging influence Vietnamese consumers’
+                        emotional value perception, product attitudes, and purchase
+                        intentions across different demographic groups.
+                    </em>
+                </p>
+                <button class="btn"
+                    onclick="window.open('https://vmostscience.vjst.vn/index.php/vmost_jossh/article/view/368')">
+                    View Published
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEAR 2 -->
+    <div class="showcase-item year-2">
+        <span class="showcase-year">Year 2</span>
+
+        <div class="showcase-card">
+            <div class="showcase-image">
+                <img src="./assets/achieve-2.jpg" alt="Year 2 Project">
+            </div>
+            
+            <div class="showcase-content">
+                <h3>CHAMPION | FINNOVATION BOOTCAMP 2024</h3>
+                <p class="content-text">
+                    Around this time, I started to feel peer pressure more intensely.
+                </p>
+                <p class="content-text">
+                    In hindsight, that fear was not entirely a bad thing.
+                    I could proudly say that 'my second year of university'
+                    became the point where I started making the most of my student life.
+                </p>
+                <hr class="showcase-divider">
+                <p class="content-text">
+                    <em>
+                        This project examines a 'digital identity verification' challenge faced by
+                        UOB Bank when serving foreign customers under Decision No. 2345/QĐ-NHNN.
+                        It proposes a two-stage solution combining passport-based eKYC
+                        and VNeID app-to-app authentication.
+                    </em>
+                </p>
+                <div class="project-actions">
+                    <button 
+                        class="btn project-btn btn-outline"
+                        onclick="window.open('./assets/FinnovationBootcamp2024_GloryTech.pdf')"
+                    >
+                        View Slides
+                    </button>
+
+                    <button 
+                        class="btn project-btn btn-primary"
+                        onclick="window.open('https://youtube.com/shorts/gnkNt0w17bY?feature=share')"
+                    >
+                        View Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEAR 3 -->
+    <div class="showcase-item year-3">
+        <span class="showcase-year">Year 3</span>
+
+        <div class="showcase-card">
+            <div class="showcase-image">
+                <img src="./assets/achieve-3.jpg" alt="Year 3 Project">
+            </div>
+            
+            <div class="showcase-content">
+                <h3>TOP 12 | ACCESSIBILITY DESIGN COMPETITIONS 2025</h3>
+                <p class="content-text">
+                    By my final year of university, I was questioning myself more than ever: 
+                </p>
+                <p class="content-text">
+                    Whether I had chosen the right field or
+                    whether what I had learned could truly be applied beyond the classroom; 
+                </p>
+                <p class="content-text">
+                    Once again, I was given the opportunity to find my own answers.
+                </p>
+                <p class="content-text">
+                    ADC 2025 - a competition initiative by RMIT University Vietnam designed to inspire students to 
+                    develop inclusive solutions that enable people with disabilities (PWDs) to thrive in professional environments.
+                </p>
+                <hr class="showcase-divider">
+                <p class="content-text">
+                    <em>
+                        This project proposes a web-based workplace simulation addressing 
+                        employment barriers for (PWDs).
+                        The platform applies WCAG 2.1 AA and AASPIRE guidelines and integrates 
+                        AI via a RAG-based framework to support inclusive hiring, CV review, 
+                        and interview practice.
+                    </em>
+                </p>
+                <div class="project-actions">
+                    <button 
+                        class="btn project-btn btn-outline"
+                        onclick="window.open('./assets/ADC-2025-The-WWS-Proposal.pdf')"
+                    >
+                        View Proposal
+                    </button>
+
+                    <button 
+                        class="btn project-btn btn-outline"
+                        onclick="window.open('./assets/ADC2025_The WWS Team_Final.pdf')"
+                    >
+                        View Slides
+                    </button>
+
+                    <button 
+                        class="btn project-btn btn-primary"
+                        onclick="window.open('https://youtu.be/gG0gtBNvJBE')"
+                    >
+                        View Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- ===================== End ===================== -->
+<!-- ===================== Academic Projects ===================== -->
+<section class="academic" id="academic">
+    <div class="section-header">
+        <span class="section-pill"></span>
+        <h2>My Most Notable University Projects</h2>
+    </div>
+
+
+    <div class="academic-grid">
+
+        <div class="academic-card">
+            <div class="academic-meta">
+                <span class="tag">ECON1612 | Big Data, ML, and Society</span>
+                <span class="year">2025</span>
+            </div>
+
+            <h3>Machine Learning Solution for UPS - A Logistics Industry Business Problem</h3>
+
+            <p>
+                Built an XGBoost-powered decision system predicting 
+                UPS Access Point locations to reduce last-mile delivery costs.
+            </p>
+
+            <button 
+                class="academic-link"
+                onclick="window.open('./assets/Detailed Slides_Assignment_3_ECON1612_SGS04_G01.pdf')"
+            >
+                View Slides →
+            </button>
+        </div>
+        
+        <div class="academic-card">
+            <div class="academic-meta">
+                <span class="tag">ECON1598 | Blockchain Application Project</span>
+                <span class="year">2025</span>
+            </div>
+
+            <h3>Web3 Tech Startup Pitch - Real Estate Market</h3>
+
+            <p>
+                Proposed a compliance-first blockchain platform enabling fractional 
+                real estate ownership, transparency, liquidity, and risk-aware investment decisions.
+            </p>
+
+            <button 
+                class="academic-link"
+                onclick="window.open('./assets/Blockchain Application Project.pdf')"
+            >
+                View Report →
+            </button>
+        </div>
+
+        <div class="academic-card">
+            <div class="academic-meta">
+                <span class="tag">BUSM2619 | Digital Business Design and Innovation</span>
+                <span class="year">2024</span>
+            </div>
+
+            <h3>Business Investigation - Prototype for APEC WATER Case Study</h3>
+
+            <p>
+                Designed an IoT-enabled ERP platform integrating computer vision 
+                to automate inventory, quality control, and post-sale support.
+            </p>
+
+            <button 
+                class="academic-link"
+                onclick="window.open('./assets/Blockchain Application Project.pdf')"
+            >
+                View Slides →
+            </button>
+            <button 
+                class="academic-link"
+                onclick="window.open('https://www.canva.com/design/DAGcSBjSGrA/lmIL-nRCy-Ncv29A9QaSRQ/view?utm_content=DAGcSBjSGrA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd857faf1eb')"
+            >
+                View Prototype Report
+            </button>
+            <button 
+                class="academic-link"
+                onclick="window.open('./assets/Assignment 3A-Design Project Proposal_ISYS2128_SGS02_FRI_2PM_Team05.pdf')"
+            >
+                View Project Proposal
+            </button>
+        </div>
+
+        <div class="academic-card">
+            <div class="academic-meta">
+                <span class="tag">ISYS3444 | Introduction to Enterprise AI</span>
+                <span class="year">2024</span>
+            </div>
+
+            <h3>Project Pitch - CyberAI Solution for SingHealth</h3>
+
+            <p>
+                Built an AI-driven cybersecurity platform using ML 
+                and NLP to proactively detect, assess, and mitigate healthcare threats.
+            </p>
+
+            <button 
+                class="academic-link"
+                onclick="window.open('./assets/ISYS3444-A3-G1-SingHealth.pdf')"
+            >
+                View Report →
+            </button>
+            <button 
+                class="academic-link"
+                onclick="window.open('./assets/ISYS3444 Project Pitch.pdf')"
+            >
+                View Slides
+            </button>
+        </div>
+
+    </div>
+</section>
+<!-- ===================== End ===================== -->
+<!-- ===================== My Connections ===================== -->
+<section class="connections" id="connections">
+    <div class="section-header">
+        <span class="section-pill"></span>
+        <h2>People I <span>have met</span></h2>
+    </div>
+
+    <div class="connections-container">
+        <!-- Arrow left -->
+        <button class="conn-arrow left" aria-label="Scroll Left">&#10094;</button>
+
+        <div class="connections-row">
+            <!-- Card 1 -->
+            <div class="connection-card">
+                <img src="./assets/conn-1.jpg" alt="Connection 1">
+                <div class="connection-content">
+                    <h3>RMIT Fintech Club</h3>
+                    <p>
+                        A community that allowed me to join many events and connect with people who 
+                        share the same interest in fintech but come from different backgrounds.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="connection-card">
+                <img src="./assets/conn-2.jpg" alt="Connection 2">
+                <div class="connection-content">
+                    <h3>RMIT RISE Club</h3>
+                    <p>
+                        I joined RMIT RISE when the club had just started and was still very small. 
+                        Even so, everyone was strong minded and serious about what they were building. 
+                    </p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="connection-card">
+                <img src="./assets/conn-3.jpg" alt="Connection 3">
+                <div class="connection-content">
+                    <h3>Global Leadership Program</h3>
+                    <p>
+                        A program organized by RMIT that connected students with industry professionals 
+                        through team activities and discussions.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="connection-card">
+                <img src="./assets/conn-4.jpg" alt="Connection 4">
+                <div class="connection-content">
+                    <h3>ILA English Center</h3>
+                    <p>
+                        My first self earned part time job and a place where I learned responsibility, 
+                        discipline, and how to work in a professional environment. 
+                    </p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="connection-card">
+                <img src="./assets/conn-5.jpg" alt="Connection 5">
+                <div class="connection-content">
+                    <h3>Competitions Mentors and Fellows</h3>
+                    <p>
+                        It's my honor that the mentors supporting us from early rounds till 
+                        even after the competition. Kudos to them 
+                        and fellows I connected with during this journey.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="connection-card">
+                <img src="./assets/conn-6.jpg" alt="Connection 6">
+                <div class="connection-content">
+                    <h3>Finnovation Bootcamp Crew</h3>
+                    <p>
+                        My first competition experience, where five strangers were grouped into one team. 
+                        Through this journey, a strong bond was formed.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="connection-card">
+                <img src="./assets/conn-7.jpg" alt="Connection 7">
+                <div class="connection-content">
+                    <h3>Research Partner</h3>
+                    <p>
+                        My research partner was also my first mentor at university. His guidance helped 
+                        me improve my thinking process and complete my work with more confidence.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrow right -->
+        <button class="conn-arrow right" aria-label="Scroll Right">&#10095;</button>
+    </div>
+</section>
+<!-- ===================== End ===================== -->
+<!-- ===================== Footer ===================== -->
+<section id="contact" class="contact">
+    <p class="section_text_p1">Get In Touch</p>
+    <h2 class="section-title">Contact <span>Me</span></h2>
+
+    <div class="contact-box">
+        <a href="mailto:ledieuha0425@gmail.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>ledieuha0425@gmail.com</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/hale04/" 
+           target="_blank" 
+           class="contact-item">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+    </div>
+
+     <footer class="contact-footer">
+        <p>Copyright &#169; 2025 Ha Le. All Rights Reserved.</p>
+    </footer>
+
+</section>
+
+
+<!-- ===================== End ===================== -->
+</body>
+</html>
