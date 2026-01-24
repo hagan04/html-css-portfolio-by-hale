@@ -56,4 +56,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     row.addEventListener("scroll", updateArrows);
     updateArrows();
+
+    /* ===== REAL TYPING EFFECT ===== */
+    const words = [
+        "a Final-Year Student",
+        "Majoring in BusTech"
+    ];
+
+    const typingSpan = document.querySelector(".typing-text span");
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        
+        if (!isDeleting) {
+            typingSpan.textContent = currentWord.slice(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === currentWord.length) {
+                setTimeout(() => isDeleting = true, 1800);
+            }
+        } else {
+            typingSpan.textContent = currentWord.slice(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+        }
+
+        const speed = isDeleting ? 40 : 80;
+        setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+
 });
