@@ -36,7 +36,6 @@
     .home {
         flex-direction: column;
         text-align: center;
-        margin: 5rem 4rem;
         gap: 4rem;
     }
 
@@ -77,13 +76,11 @@
 /* MOBILE ONLY (≤ 768px) */
 @media (max-width: 768px) {
 
-    /* ===== TYPOGRAPHY ===== */
     .content-text {
         font-size: 1.25rem;
         line-height: 1.6;
     }
 
-    /* ===== ACADEMIC ===== */
     .academic-grid {
         grid-template-columns: 1fr;
     }
@@ -92,7 +89,6 @@
         transform: none;
     }
 
-    /* ===== CONTACT ===== */
     .contact {
         min-height: auto;
         padding: 6rem 4%;
@@ -101,5 +97,9 @@
     .contact-box {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .connections-row {
+        gap: 1.5rem;
     }
 }
