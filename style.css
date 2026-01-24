@@ -37,8 +37,13 @@ body{
 }
 
 section {
-    padding: 4rem 9%;
-    scroll-margin-top: 90px;
+    padding: 4rem clamp(4%, 6vw, 9%);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section:not(.home) {
+    margin-top: 6rem;
 }
 
 span{
@@ -122,23 +127,25 @@ nav a.active {
     display: flex;
     align-items: flex-start;
     gap: 7rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .home .home-content h1{
-    font-size: 6.4rem;
+    font-size: clamp(3.8rem, 5vw, 6.4rem);
     font-weight: 700;
     line-height: 1.15;
 }
 
 .home .home-content h3 {
-    font-size: 4.2rem;
+    font-size: clamp(2.4rem, 3.5vw, 4.2rem);
     margin-bottom: 2.2rem;
     font-weight: 600;
 }
 
 .home-content p,
 .content-text {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 1.2vw, 1.8rem);
     line-height: 1.7;
     color: var(--text-secondary);
     margin-bottom: 1.4rem;
@@ -220,51 +227,12 @@ nav a.active {
     font-size: 5rem;
     font-weight: 600;
     min-width: 420px;
+    white-space: nowrap;
 }
 
 .typing-text span{
     position: relative;
-}
-
-.typing-text span::before{
-    content: "RMIT University";
     color: var(--accent);
-    animation: words 20s infinite;
-}
-
-.typing-text span::after{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: var(--accent);
-    right: -8px;
-    top: 0;
-    animation: cursor 0.8s steps(1) infinite;
-}
-
-@keyframes cursor{
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes words{
-    0%, 20%{
-        content: "a Final-Year Student";
-    }
-    21%, 40%{
-        content: "Majoring in BusTech";
-    }
-    41%, 60%{
-        content: "a Final-Year Student";
-    }
-    61%, 80%{
-        content: "Majoring in BusTech";
-    }
-    81%, 100%{
-        content: "a Final-Year Student";
-    }
 }
 /* ===== SHOWCASE SECTION ===== */
 .showcase-item {
