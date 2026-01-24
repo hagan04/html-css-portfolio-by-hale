@@ -1,67 +1,59 @@
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("nav a");
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("scroll", () => {
-    let current = "";
+    /* ===== ACTIVE NAV ===== */
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
+    window.addEventListener("scroll", () => {
+        let current = "";
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            current = section.getAttribute("id");
-        }
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (scrollY >= sectionTop) {
+                current = section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
+    /* ===== MOBILE MENU ===== */
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
     });
-});
 
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
+    /* ===== CONNECTIONS ARROWS ===== */
+    const row = document.querySelector(".connections-row");
+    const leftArrow = document.querySelector(".conn-arrow.left");
+    const rightArrow = document.querySelector(".conn-arrow.right");
 
-menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
+    if (!row) return;
 
-const row = document.querySelector('.connections-row');
-const leftArrow = document.querySelector('.conn-arrow.left');
-const rightArrow = document.querySelector('.conn-arrow.right');
+    const scrollAmount = 320;
 
-const scrollAmount = 320;
+    function updateArrows() {
+        const maxScroll = row.scrollWidth - row.clientWidth;
 
-function updateArrows() {
-    const maxScroll = row.scrollWidth - row.clientWidth;
-
-    if (row.scrollLeft <= 5) {
-        
-        leftArrow.classList.remove('show');
-        rightArrow.classList.add('show');
-    } else if (row.scrollLeft >= maxScroll - 5) {
-        
-        leftArrow.classList.add('show');
-        rightArrow.classList.remove('show');
-    } else {
-        
-        leftArrow.classList.add('show');
-        rightArrow.classList.add('show');
+        leftArrow.classList.toggle("show", row.scrollLeft > 5);
+        rightArrow.classList.toggle("show", row.scrollLeft < maxScroll - 5);
     }
-}
 
-row.addEventListener('scroll', updateArrows);
+    leftArrow.addEventListener("click", () => {
+        row.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
 
-leftArrow.addEventListener('click', () => {
-    row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    rightArrow.addEventListener("click", () => {
+        row.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+
+    row.addEventListener("scroll", updateArrows);
+    updateArrows();
 });
-rightArrow.addEventListener('click', () => {
-    row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});
-
-updateArrows()
