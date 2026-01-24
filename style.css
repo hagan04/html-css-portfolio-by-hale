@@ -117,38 +117,50 @@ nav a.active {
 
 /* ===== HOME SECTION ===== */
 .home {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
+    padding-top: 11rem;
     display: flex;
-    align-items: center;
-    gap: 5rem;
+    align-items: flex-start;
+    gap: 7rem;
 }
 
 .home .home-content h1{
-    font-size: 6rem;
+    font-size: 6.4rem;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.15;
 }
 
 .home .home-content h3 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 4.2rem;
+    margin-bottom: 2.2rem;
+    font-weight: 600;
 }
 
 .home-content p,
 .content-text {
-    font-size: 1.35rem;
-    line-height: 1.6;
+    font-size: 1.8rem;
+    line-height: 1.7;
     color: var(--text-secondary);
-    max-width: 60ch;
-    margin-bottom: 0.3rem;
-    opacity: 0.85;
+    margin-bottom: 1.4rem;
+    opacity: 0.65;
     letter-spacing: 0.01em;
     font-weight: 400;
+
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.home-content {
+    max-width: 640px;
 }
 
 .content-text:last-child {
     margin-bottom: 1.5rem;
+}
+
+.home-img {
+    transform: translateY(-40px);
 }
 
 .home-img img{
@@ -159,10 +171,6 @@ nav a.active {
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.35);
     cursor: pointer;
     transition: 0.2s linear;
-}
-
-.home-img img:hover {
-    transform: scale(1.05);
 }
 
 .social-icons a{
@@ -209,9 +217,9 @@ nav a.active {
 }
 /* Typing text animation */
 .typing-text{
-    font-size: 3.4rem;
+    font-size: 5rem;
     font-weight: 600;
-    min-width: 280px;
+    min-width: 420px;
 }
 
 .typing-text span{
@@ -274,12 +282,13 @@ nav a.active {
 }
 
 .showcase-card {
-    display: flex;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4.5rem;
+    padding: 4rem;
     background: var(--navy-800);
     border-radius: 2.4rem;
-    padding: 4.5rem;
-    align-items: stretch;
+    align-items: center;
     transition: 0.4s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
@@ -308,22 +317,36 @@ nav a.active {
 .showcase-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 
 .showcase-content h3 {
     font-size: 2.4rem;
+    line-height: 1.25;
     margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
+/* .showcase-content h2 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin-bottom: 1.6rem;
+} */
+
 .showcase-content p {
-    font-size: 1.45rem;
-    line-height: 1.45;
-    max-width: 68ch;
-    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    opacity: 0.9;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 1.2rem;
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
 
 .showcase-content .btn {
