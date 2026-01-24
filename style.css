@@ -209,7 +209,7 @@ nav a.active {
 }
 /* Typing text animation */
 .typing-text{
-    font-size: 34px;
+    font-size: 3.4rem;
     font-weight: 600;
     min-width: 280px;
 }
@@ -258,22 +258,7 @@ nav a.active {
         content: "a Final-Year Student";
     }
 }
-
 /* ===== SHOWCASE SECTION ===== */
-/* .study-desc {
-    font-size: 0.7rem;
-    line-height: 1.45;
-    color: var(--text-secondary);
-    max-width: 100%;
-    margin-top: 1.8rem;
-    padding-top: 1.8rem;
-    margin-bottom: 0.3rem;
-    opacity: 0.85;
-    letter-spacing: 0.01em;
-    font-weight: 400;
-    border-top: 1px solid rgba(203, 213, 225, 0.25);
-    font-style: italic;
-} */
 .showcase-item {
     margin-bottom: 8rem;
 }
@@ -503,11 +488,14 @@ nav a.active {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 1rem 0;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
 }
 
 .connection-card {
-    width: 410px;   
-    height: 450px;
+    width: clamp(280px, 30vw, 380px);
+    height: 420px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -556,14 +544,16 @@ nav a.active {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background: rgba(10, 26, 47, 0.9);
     color: var(--accent);
     font-size: 2.5rem;
     border: none;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s, transform 0.2s;
+    padding: 1rem;
+    border-radius: 50%;
     z-index: 10;
+    transition: 0.3s;
 }
 
 .conn-arrow:hover {
@@ -578,8 +568,9 @@ nav a.active {
     right: 0;
 }
 
-.conn-arrow.show {                /* Show arrows only when needed */
+.conn-arrow.show {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .connections-row::-webkit-scrollbar {
@@ -588,7 +579,8 @@ nav a.active {
 
 .connections-row {
     -ms-overflow-style: none;
-    scrollbar-width: none;     
+    scrollbar-width: none;
+    pointer-events: auto;     
 }
 
 /* ===== CONTACT & FOOTER ===== */
