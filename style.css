@@ -224,15 +224,15 @@ nav a.active {
 }
 /* Typing text animation */
 .typing-text{
-    font-size: 5rem;
-    font-weight: 600;
-    min-width: 420px;
-    white-space: nowrap;
+    display: block;
+    width: 28ch;
+    height: 5.2rem;
+    overflow: hidden;
 }
 
 .typing-text span{
-    position: relative;
-    color: var(--accent);
+    display: inline-block;
+    white-space: nowrap;
 }
 /* ===== SHOWCASE SECTION ===== */
 .showcase-item {
